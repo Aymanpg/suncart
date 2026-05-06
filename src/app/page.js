@@ -1,65 +1,123 @@
-import Image from "next/image";
+// src/app/page.js
+'use client';
+import Link from 'next/link';
+import { ShoppingCart, Sun, Star } from 'lucide-react';
+
+const featuredProducts = [
+  {
+    id: 1,
+    name: "Summer Sunglasses",
+    price: 1299,
+    image: "https://picsum.photos/id/1015/400/300",
+    rating: 4.8,
+  },
+  {
+    id: 2,
+    name: "Beach Straw Hat",
+    price: 899,
+    image: "https://picsum.photos/id/201/400/300",
+    rating: 4.6,
+  },
+  {
+    id: 3,
+    name: "Lightweight Shirt",
+    price: 1599,
+    image: "https://picsum.photos/id/1060/400/300",
+    rating: 4.9,
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* Hero Section */}
+      <div className="hero bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 text-white min-h-[80vh] flex items-center">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+              Summer Vibes <br /> Only 🌞
+            </h1>
+            <p className="text-2xl mb-10">
+              Discover the best summer essentials at unbeatable prices
+            </p>
+            <div className="flex gap-4 justify-center">
+              <Link href="/products" className="btn btn-lg btn-primary text-lg">
+                Shop Now
+              </Link>
+              <Link href="#featured" className="btn btn-lg btn-outline text-lg">
+                Explore Collection
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </div>
+
+      {/* Featured Products */}
+      <div id="featured" className="max-w-7xl mx-auto px-6 py-16">
+        <div className="flex justify-between items-center mb-10">
+          <h2 className="text-4xl font-bold">Popular This Summer 🔥</h2>
+          <Link href="/products" className="text-primary hover:underline flex items-center gap-2">
+            View All Products →
+          </Link>
         </div>
-      </main>
-    </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredProducts.map((product) => (
+            <div key={product.id} className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all">
+              <figure>
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="h-64 w-full object-cover" 
+                />
+              </figure>
+              <div className="card-body">
+                <h3 className="card-title">{product.name}</h3>
+                <div className="flex items-center gap-2">
+                  <div className="flex text-yellow-400">
+                    {Array(5).fill().map((_, i) => (
+                      <Star key={i} size={18} fill={i < Math.floor(product.rating) ? "currentColor" : "none"} />
+                    ))}
+                  </div>
+                  <span className="text-sm">({product.rating})</span>
+                </div>
+                <p className="text-2xl font-bold text-primary mt-2">
+                  ৳{product.price}
+                </p>
+                <div className="card-actions justify-end mt-4">
+                  <Link href={`/products/${product.id}`} className="btn btn-primary">
+                    View Details
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Why Choose Us Section */}
+      <div className="bg-base-200 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">Why Shop With SunCart?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-5xl mb-4">☀️</div>
+              <h3 className="text-xl font-semibold mb-2">Summer Specialists</h3>
+              <p className="text-base-content/70">Curated collection of premium summer products</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl mb-4">🚚</div>
+              <h3 className="text-xl font-semibold mb-2">Fast Delivery</h3>
+              <p className="text-base-content/70">Quick shipping all over Bangladesh</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl mb-4">🔒</div>
+              <h3 className="text-xl font-semibold mb-2">Secure Shopping</h3>
+              <p className="text-base-content/70">Safe payment &amp; protected account</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
