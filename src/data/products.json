@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings. Blocks 99% of UVA and UVB rays to protect your eyes while keeping you looking cool on the beach or in the city.",
+    "image": "https://picsum.photos/id/1015/600/400",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Beach Straw Hat",
+    "brand": "BeachWave",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 25,
+    "description": "A wide-brim straw hat to shield you from the blazing sun. Lightweight, breathable, and perfect for the beach, poolside, or outdoor festivals.",
+    "image": "https://picsum.photos/id/201/600/400",
+    "category": "Accessories"
+  },
+  {
+    "id": 3,
+    "name": "SPF 50 Sunscreen Lotion",
+    "brand": "GlowSkin",
+    "price": 18,
+    "rating": 4.9,
+    "stock": 50,
+    "description": "Dermatologist-approved SPF 50+ sunscreen that protects against UVA and UVB rays. Water-resistant formula, perfect for swimming and outdoor activities.",
+    "image": "https://picsum.photos/id/326/600/400",
+    "category": "Skincare"
+  },
+  {
+    "id": 4,
+    "name": "Lightweight Linen Shirt",
+    "brand": "AquaFit",
+    "price": 22,
+    "rating": 4.6,
+    "stock": 30,
+    "description": "Breathable linen shirt designed for hot summer days. Moisture-wicking fabric keeps you cool and comfortable whether you're at the beach or in the city.",
+    "image": "https://picsum.photos/id/1060/600/400",
+    "category": "Clothing"
+  },
+  {
+    "id": 5,
+    "name": "Waterproof Beach Bag",
+    "brand": "BeachWave",
+    "price": 25,
+    "rating": 4.8,
+    "stock": 15,
+    "description": "Large waterproof tote bag with multiple compartments. Fits your towel, sunscreen, snacks, and more. Perfect companion for beach days and outdoor trips.",
+    "image": "https://picsum.photos/id/175/600/400",
+    "category": "Bags"
+  },
+  {
+    "id": 6,
+    "name": "Aloe Vera After-Sun Gel",
+    "brand": "GlowSkin",
+    "price": 10,
+    "rating": 4.7,
+    "stock": 40,
+    "description": "Soothing aloe vera gel to calm and hydrate sun-exposed skin. Provides instant relief from sunburn and keeps your skin moisturized all day long.",
+    "image": "https://picsum.photos/id/145/600/400",
+    "category": "Skincare"
+  }
+]

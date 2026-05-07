@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'SunCart - Summer Essentials',
-  description: 'Best summer products at amazing prices',
+  description: 'Shop the best summer products',
   icons: {
     icon: '/favicon.ico',
   },
@@ -15,13 +15,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col bg-base-100">
         <Navbar />
         <main className="flex-1">
           {children}
         </main>
         <Footer />
-        <Toaster position="top-center" />
+        <Toaster position="top-center" richColors />
       </body>
     </html>
   );
