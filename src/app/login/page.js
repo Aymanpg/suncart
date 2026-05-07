@@ -35,7 +35,7 @@ function LoginForm() {
         setError('Invalid email or password. Please try again.');
         toast.error('Login failed!');
       } else {
-        toast.success('Welcome back! 🎉');
+        toast.success('Welcome back!');
         router.push(redirect);
       }
     } catch (err) {
@@ -124,7 +124,7 @@ function LoginForm() {
                 onChange={handleChange}
                 placeholder="you@example.com"
                 required
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
+                className="w-full px-4 py-3 rounded-xl text-black border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
               />
             </div>
 
@@ -140,7 +140,7 @@ function LoginForm() {
                 onChange={handleChange}
                 placeholder="Enter your password"
                 required
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
+                className="w-full px-4 py-3 rounded-xl text-black border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
               />
             </div>
 
