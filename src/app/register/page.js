@@ -43,7 +43,7 @@ export default function RegisterPage() {
         setError(res.error.message || 'Registration failed. Try again.');
         toast.error('Registration failed!');
       } else {
-        toast.success('Account created successfully! 🎉');
+        toast.success('Account created successfully!');
         router.push('/login');
       }
     } catch (err) {
@@ -78,7 +78,7 @@ export default function RegisterPage() {
                 <span className="text-yellow-500">Cart</span>
               </span>
             </Link>
-            <h1 className="text-2xl font-bold text-gray-800">Create Account ✨</h1>
+            <h1 className="text-2xl font-bold text-gray-800">Create Account</h1>
             <p className="text-gray-400 text-sm mt-1">
               Join SunCart and start your summer shopping
             </p>
@@ -100,7 +100,7 @@ export default function RegisterPage() {
           {/* Divider */}
           <div className="flex items-center gap-3 mb-6">
             <div className="flex-1 h-px bg-gray-200" />
-            <span className="text-xs text-gray-400">or register with email</span>
+            <span className="text-xs text-black">or register with email</span>
             <div className="flex-1 h-px bg-gray-200" />
           </div>
 
@@ -126,7 +126,7 @@ export default function RegisterPage() {
                 onChange={handleChange}
                 placeholder="John Doe"
                 required
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
+                className="w-full px-4 py-3 rounded-xl text-black border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
               />
             </div>
 
@@ -142,7 +142,7 @@ export default function RegisterPage() {
                 onChange={handleChange}
                 placeholder="you@example.com"
                 required
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
+                className="w-full px-4 py-3 rounded-xl text-black border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
               />
             </div>
 
@@ -158,7 +158,7 @@ export default function RegisterPage() {
                 onChange={handleChange}
                 placeholder="Min. 6 characters"
                 required
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
+                className="w-full px-4 py-3 rounded-xl text-black border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
               />
               {/* Password strength */}
               {form.password && (
