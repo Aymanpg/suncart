@@ -29,7 +29,7 @@ export default function ProductsPage() {
     <div className="bg-[#fffdf7] min-h-screen">
 
       {/* ── PAGE HEADER ── */}
-      <section className="bg-gradient-to-r from-orange-500 to-yellow-400 py-14 text-center text-white">
+      <section className="bg-linear-to-r from-orange-500 to-yellow-400 py-14 text-center text-white">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-3">All Products 🛍️</h1>
         <p className="text-white/90 text-lg max-w-xl mx-auto">
           Browse our full collection of summer essentials

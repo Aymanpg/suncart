@@ -7,7 +7,7 @@
     "rating": 4.7,
     "stock": 10,
     "description": "Stylish UV protection sunglasses perfect for summer outings. Blocks 99% of UVA and UVB rays to protect your eyes while keeping you looking cool on the beach or in the city.",
-    "image": "https://picsum.photos/id/1015/600/400",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600&h=400&fit=crop",
     "category": "Accessories"
   },
   {
@@ -18,7 +18,7 @@
     "rating": 4.5,
     "stock": 25,
     "description": "A wide-brim straw hat to shield you from the blazing sun. Lightweight, breathable, and perfect for the beach, poolside, or outdoor festivals.",
-    "image": "https://picsum.photos/id/201/600/400",
+    "image": "https://images.unsplash.com/photo-1531695827793-8d83b7857cb3?w=600&h=400&fit=crop",
     "category": "Accessories"
   },
   {
@@ -29,7 +29,7 @@
     "rating": 4.9,
     "stock": 50,
     "description": "Dermatologist-approved SPF 50+ sunscreen that protects against UVA and UVB rays. Water-resistant formula, perfect for swimming and outdoor activities.",
-    "image": "https://picsum.photos/id/326/600/400",
+    "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&h=400&fit=crop",
     "category": "Skincare"
   },
   {
@@ -40,7 +40,7 @@
     "rating": 4.6,
     "stock": 30,
     "description": "Breathable linen shirt designed for hot summer days. Moisture-wicking fabric keeps you cool and comfortable whether you're at the beach or in the city.",
-    "image": "https://picsum.photos/id/1060/600/400",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600&h=400&fit=crop",
     "category": "Clothing"
   },
   {
@@ -51,7 +51,7 @@
     "rating": 4.8,
     "stock": 15,
     "description": "Large waterproof tote bag with multiple compartments. Fits your towel, sunscreen, snacks, and more. Perfect companion for beach days and outdoor trips.",
-    "image": "https://picsum.photos/id/175/600/400",
+    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&h=400&fit=crop",
     "category": "Bags"
   },
   {
@@ -62,7 +62,205 @@
     "rating": 4.7,
     "stock": 40,
     "description": "Soothing aloe vera gel to calm and hydrate sun-exposed skin. Provides instant relief from sunburn and keeps your skin moisturized all day long.",
-    "image": "https://picsum.photos/id/145/600/400",
+    "image": "https://images.unsplash.com/photo-1607006344380-b6775a0824a7?w=600&h=400&fit=crop",
     "category": "Skincare"
+  },
+  {
+    "id": 7,
+    "name": "Flip Flop Sandals",
+    "brand": "BeachWave",
+    "price": 9,
+    "rating": 4.3,
+    "stock": 60,
+    "description": "Comfortable and durable flip flops with cushioned soles. Perfect for beach walks, poolside lounging, or casual summer outings.",
+    "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=600&h=400&fit=crop",
+    "category": "Footwear"
+  },
+  {
+    "id": 8,
+    "name": "Swim Shorts",
+    "brand": "AquaFit",
+    "price": 19,
+    "rating": 4.5,
+    "stock": 35,
+    "description": "Quick-dry swim shorts with elastic waistband and side pockets. Ideal for swimming, surfing, or casual beach wear.",
+    "image": "https://images.unsplash.com/photo-1565693413579-8ff3fdc1b03b?w=600&h=400&fit=crop",
+    "category": "Clothing"
+  },
+  {
+    "id": 9,
+    "name": "Portable Beach Umbrella",
+    "brand": "BeachWave",
+    "price": 35,
+    "rating": 4.6,
+    "stock": 20,
+    "description": "Lightweight and sturdy beach umbrella with UV protection coating. Easy to set up and carry, provides excellent shade on sunny days.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&h=400&fit=crop",
+    "category": "Beach Gear"
+  },
+  {
+    "id": 10,
+    "name": "Cooling Face Mist",
+    "brand": "GlowSkin",
+    "price": 14,
+    "rating": 4.8,
+    "stock": 45,
+    "description": "Refreshing facial mist with rose water and hyaluronic acid. Instantly cools and hydrates skin during hot summer days.",
+    "image": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&h=400&fit=crop",
+    "category": "Skincare"
+  },
+  {
+    "id": 11,
+    "name": "Inflatable Pool Float",
+    "brand": "AquaFit",
+    "price": 28,
+    "rating": 4.4,
+    "stock": 18,
+    "description": "Giant inflatable pool float in fun summer shapes. Made from durable PVC, holds up to 200 lbs. Perfect for pool parties and lazy river days.",
+    "image": "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&h=400&fit=crop",
+    "category": "Beach Gear"
+  },
+  {
+    "id": 12,
+    "name": "Tropical Print Dress",
+    "brand": "SunShade",
+    "price": 32,
+    "rating": 4.7,
+    "stock": 22,
+    "description": "Flowy tropical print summer dress made from lightweight chiffon. Perfect for beach days, summer parties, or casual outings.",
+    "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=400&fit=crop",
+    "category": "Clothing"
+  },
+  {
+    "id": 13,
+    "name": "Waterproof Sunscreen Spray",
+    "brand": "GlowSkin",
+    "price": 16,
+    "rating": 4.6,
+    "stock": 55,
+    "description": "Easy-to-apply spray sunscreen with SPF 70. Lightweight, non-greasy formula that dries instantly. Great for active outdoor days.",
+    "image": "https://images.unsplash.com/photo-1526758097130-bab247274f58?w=600&h=400&fit=crop",
+    "category": "Skincare"
+  },
+  {
+    "id": 14,
+    "name": "Snorkeling Set",
+    "brand": "AquaFit",
+    "price": 45,
+    "rating": 4.8,
+    "stock": 12,
+    "description": "Complete snorkeling set with anti-fog mask, dry-top snorkel, and adjustable fins. Explore the underwater world in crystal clear summer waters.",
+    "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=400&fit=crop",
+    "category": "Beach Gear"
+  },
+  {
+    "id": 15,
+    "name": "Woven Beach Bracelet",
+    "brand": "SunShade",
+    "price": 6,
+    "rating": 4.3,
+    "stock": 80,
+    "description": "Handcrafted woven bracelet with vibrant summer colors. Water-resistant and adjustable, perfect for beach and festival looks.",
+    "image": "https://images.unsplash.com/photo-1611085583191-a3b181a88401?w=600&h=400&fit=crop",
+    "category": "Accessories"
+  },
+  {
+    "id": 16,
+    "name": "Insulated Water Bottle",
+    "brand": "AquaFit",
+    "price": 30,
+    "rating": 4.9,
+    "stock": 40,
+    "description": "Double-wall insulated stainless steel water bottle that keeps drinks cold for 24 hours. Leak-proof lid and BPA-free. Essential for summer hydration.",
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600&h=400&fit=crop",
+    "category": "Accessories"
+  },
+  {
+    "id": 17,
+    "name": "Summer Espadrilles",
+    "brand": "BeachWave",
+    "price": 27,
+    "rating": 4.5,
+    "stock": 28,
+    "description": "Classic canvas espadrilles with jute soles. Lightweight and breathable, perfect for summer walks in the city or by the sea.",
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=600&h=400&fit=crop",
+    "category": "Footwear"
+  },
+  {
+    "id": 18,
+    "name": "Vitamin C Face Serum",
+    "brand": "GlowSkin",
+    "price": 24,
+    "rating": 4.8,
+    "stock": 35,
+    "description": "Brightening Vitamin C serum that fights sun damage and hyperpigmentation. Lightweight formula absorbs quickly for glowing summer skin.",
+    "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=600&h=400&fit=crop",
+    "category": "Skincare"
+  },
+  {
+    "id": 19,
+    "name": "Beach Volleyball",
+    "brand": "AquaFit",
+    "price": 20,
+    "rating": 4.4,
+    "stock": 22,
+    "description": "Official size and weight beach volleyball with soft touch cover. Water and sand resistant, perfect for beach tournaments and backyard fun.",
+    "image": "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?w=600&h=400&fit=crop",
+    "category": "Beach Gear"
+  },
+  {
+    "id": 20,
+    "name": "Linen Wide-Leg Pants",
+    "brand": "SunShade",
+    "price": 38,
+    "rating": 4.6,
+    "stock": 18,
+    "description": "Relaxed wide-leg linen pants that keep you cool and stylish. High-waisted with elastic back, pairs perfectly with any summer top.",
+    "image": "https://images.unsplash.com/photo-1509551388413-e18d0ac5d495?w=600&h=400&fit=crop",
+    "category": "Clothing"
+  },
+  {
+    "id": 21,
+    "name": "Portable Mini Fan",
+    "brand": "AquaFit",
+    "price": 13,
+    "rating": 4.5,
+    "stock": 50,
+    "description": "Rechargeable portable mini fan with 3 speed settings. Compact and quiet, perfect for outdoor events, travel, and office use during summer.",
+    "image": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop",
+    "category": "Accessories"
+  },
+  {
+    "id": 22,
+    "name": "Raffia Crossbody Bag",
+    "brand": "BeachWave",
+    "price": 21,
+    "rating": 4.4,
+    "stock": 30,
+    "description": "Stylish handwoven raffia crossbody bag with adjustable strap. Lightweight and chic — the perfect summer accessory for beach and market trips.",
+    "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&h=400&fit=crop",
+    "category": "Bags"
+  },
+  {
+    "id": 23,
+    "name": "After-Sun Moisturizer",
+    "brand": "GlowSkin",
+    "price": 17,
+    "rating": 4.7,
+    "stock": 42,
+    "description": "Deeply hydrating after-sun moisturizer with shea butter and vitamin E. Repairs and soothes sun-stressed skin overnight for a healthy summer glow.",
+    "image": "https://images.unsplash.com/photo-1570194065650-d99fb4b38b17?w=600&h=400&fit=crop",
+    "category": "Skincare"
+  },
+  {
+    "id": 24,
+    "name": "Canvas Tote Bag",
+    "brand": "BeachWave",
+    "price": 11,
+    "rating": 4.3,
+    "stock": 65,
+    "description": "Durable canvas tote bag with summer print design. Spacious enough for groceries, beach essentials, or everyday use. Eco-friendly and reusable.",
+    "image": "https://images.unsplash.com/photo-1623625434462-e5e42318ae49?w=600&h=400&fit=crop",
+    "category": "Bags"
   }
 ]
