@@ -186,7 +186,7 @@ export default function UpdateProfilePage() {
                 onChange={handleChange}
                 placeholder="Your full name"
                 required
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
+                className="w-full px-4 py-3 rounded-xl border text-black border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-orange-300 focus:border-transparent transition"
               />
             </div>
 

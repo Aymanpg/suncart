@@ -98,7 +98,7 @@ export default function Home() {
             <div className="relative w-72 h-72 md:w-96 md:h-96">
               <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl" />
               <img
-                src="https://picsum.photos/id/96/500/500"
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=500&fit=crop"
                 alt="Summer"
                 className="relative w-full h-full object-cover rounded-full border-4 border-white/40 shadow-2xl"
               />
