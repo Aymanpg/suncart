@@ -18,7 +18,7 @@
     "rating": 4.5,
     "stock": 25,
     "description": "A wide-brim straw hat to shield you from the blazing sun. Lightweight, breathable, and perfect for the beach, poolside, or outdoor festivals.",
-    "image": "https://images.unsplash.com/photo-1531695827793-8d83b7857cb3?w=600&h=400&fit=crop",
+    "image": "https://images.pexels.com/photos/22735354/pexels-photo-22735354.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category": "Accessories"
   },
   {
@@ -221,13 +221,13 @@
   },
   {
     "id": 21,
-    "name": "Portable Mini Fan",
-    "brand": "AquaFit",
-    "price": 13,
-    "rating": 4.5,
-    "stock": 50,
-    "description": "Rechargeable portable mini fan with 3 speed settings. Compact and quiet, perfect for outdoor events, travel, and office use during summer.",
-    "image": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop",
+    "name": "Polarized Sports Sunglasses",
+    "brand": "SunShade",
+    "price": 28,
+    "rating": 4.8,
+    "stock": 22,
+    "description": "High-performance polarized sunglasses with lightweight frames. Ideal for driving, sports, and outdoor activities. Blocks glare and provides 100% UV protection.",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&h=400&fit=crop",
     "category": "Accessories"
   },
   {
@@ -249,7 +249,7 @@
     "rating": 4.7,
     "stock": 42,
     "description": "Deeply hydrating after-sun moisturizer with shea butter and vitamin E. Repairs and soothes sun-stressed skin overnight for a healthy summer glow.",
-    "image": "https://images.unsplash.com/photo-1570194065650-d99fb4b38b17?w=600&h=400&fit=crop",
+    "image": "https://images.pexels.com/photos/6621465/pexels-photo-6621465.jpeg?auto=compress&cs=tinysrgb&w=800",
     "category": "Skincare"
   },
   {
