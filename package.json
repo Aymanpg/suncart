@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "better-auth": "^1.6.9",
     "daisyui": "^5.5.19",
     "lottie-react": "^2.4.1",
