@@ -1,13 +1,16 @@
 // src/app/login/page.js
 'use client';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { signIn } from '@/lib/auth-client';
 import toast from 'react-hot-toast';
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const redirect = searchParams.get('redirect') || '/';
+
   const [form, setForm] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -33,7 +36,7 @@ export default function LoginPage() {
         toast.error('Login failed!');
       } else {
         toast.success('Welcome back! 🎉');
-        router.push('/');
+        router.push(redirect);
       }
     } catch (err) {
       setError('Something went wrong. Please try again.');
@@ -47,7 +50,7 @@ export default function LoginPage() {
     try {
       await signIn.social({
         provider: 'google',
-        callbackURL: '/',
+        callbackURL: redirect,
       });
     } catch (err) {
       toast.error('Google login failed!');
@@ -57,8 +60,6 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-[#fffdf7] flex items-center justify-center px-4 py-16">
       <div className="w-full max-w-md">
-
-        {/* Card */}
         <div className="bg-white rounded-3xl shadow-xl border border-orange-100 p-8 md:p-10">
 
           {/* Header */}
@@ -70,7 +71,15 @@ export default function LoginPage() {
               </span>
             </Link>
             <h1 className="text-2xl font-bold text-gray-800">Welcome Back 👋</h1>
-            <p className="text-gray-400 text-sm mt-1">Login to your account to continue</p>
+            <p className="text-gray-400 text-sm mt-1">
+              Login to your account to continue
+            </p>
+            {/* Show redirect notice */}
+            {redirect !== '/' && (
+              <div className="mt-3 bg-orange-50 border border-orange-200 text-orange-500 text-xs rounded-xl px-4 py-2">
+                🔒 Login to view the product you selected
+              </div>
+            )}
           </div>
 
           {/* Google Button */}
@@ -93,7 +102,7 @@ export default function LoginPage() {
             <div className="flex-1 h-px bg-gray-200" />
           </div>
 
-          {/* Error Message */}
+          {/* Error */}
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-500 text-sm rounded-2xl px-4 py-3 mb-5">
               ⚠️ {error}
@@ -148,13 +157,28 @@ export default function LoginPage() {
           {/* Footer */}
           <p className="text-center text-sm text-gray-400 mt-6">
             Don't have an account?{' '}
-            <Link href="/register" className="text-orange-500 font-semibold hover:underline">
+            <Link
+              href="/register"
+              className="text-orange-500 font-semibold hover:underline"
+            >
               Register here
             </Link>
           </p>
-        </div>
 
+        </div>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-[#fffdf7] flex items-center justify-center">
+        <div className="w-12 h-12 border-4 border-orange-300 border-t-orange-500 rounded-full animate-spin" />
+      </div>
+    }>
+      <LoginForm />
+    </Suspense>
   );
 }

@@ -1,18 +1,28 @@
 // src/app/products/[id]/page.js
 'use client';
 import { use } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { useSession } from '@/lib/auth-client';
 import products from '@/data/products.json';
 
 export default function ProductDetailsPage({ params }) {
   const { id } = use(params);
-  const router = useRouter();
-
-  // TODO: replace this with real auth check later
-  const isLoggedIn = false;
+  const { data: session, isPending } = useSession();
+  const user = session?.user;
 
   const product = products.find((p) => p.id === parseInt(id));
+
+  // Loading state
+  if (isPending) {
+    return (
+      <div className="min-h-screen bg-[#fffdf7] flex items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-12 h-12 border-4 border-orange-300 border-t-orange-500 rounded-full animate-spin" />
+          <p className="text-gray-400 text-sm">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   // Product not found
   if (!product) {
@@ -32,20 +42,34 @@ export default function ProductDetailsPage({ params }) {
   }
 
   // Not logged in — show lock screen
-  if (!isLoggedIn) {
+  if (!user) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-[#fffdf7] px-4">
         <div className="bg-white rounded-3xl shadow-xl p-10 max-w-md w-full text-center border border-orange-100">
-          <div className="text-6xl mb-4">🔒</div>
+
+          {/* Product Peek */}
+          <div className="relative mb-6">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full h-44 object-cover rounded-2xl blur-sm brightness-75"
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-5xl">🔒</span>
+            </div>
+          </div>
+
           <h2 className="text-2xl font-bold text-gray-800 mb-2">
-            Login Required
+            Login to View Details
           </h2>
-          <p className="text-gray-500 mb-8">
-            You need to be logged in to view product details.
+          <p className="text-gray-500 text-sm mb-6">
+            You need to be logged in to view full product details for
+            <span className="text-orange-500 font-semibold"> {product.name}</span>.
           </p>
+
           <Link
-            href="/login"
-            className="block w-full bg-orange-500 text-white font-semibold py-3 rounded-full hover:bg-orange-600 transition mb-3"
+            href={`/login?redirect=/products/${product.id}`}
+            className="block w-full bg-orange-500 text-white font-semibold py-3 rounded-full hover:bg-orange-600 transition mb-3 shadow-md shadow-orange-200"
           >
             Login to Continue
           </Link>
@@ -66,7 +90,7 @@ export default function ProductDetailsPage({ params }) {
     );
   }
 
-  // Logged in — show product details
+  // Logged in — show full product details
   return (
     <div className="bg-[#fffdf7] min-h-screen">
 
@@ -151,6 +175,24 @@ export default function ProductDetailsPage({ params }) {
                 </span>
               </div>
 
+              {/* User greeting */}
+              <div className="bg-orange-50 rounded-2xl px-4 py-3 mb-6 flex items-center gap-3">
+                {user.image ? (
+                  <img
+                    src={user.image}
+                    alt={user.name}
+                    className="w-8 h-8 rounded-full object-cover border-2 border-orange-200"
+                  />
+                ) : (
+                  <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-white text-sm font-bold">
+                    {user.name?.charAt(0).toUpperCase()}
+                  </div>
+                )}
+                <p className="text-sm text-gray-600">
+                  Shopping as <span className="font-semibold text-orange-500">{user.name}</span>
+                </p>
+              </div>
+
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row gap-3">
                 <button className="flex-1 bg-orange-500 text-white font-semibold py-3 rounded-full hover:bg-orange-600 transition shadow-md shadow-orange-200">
@@ -171,6 +213,45 @@ export default function ProductDetailsPage({ params }) {
             </div>
           </div>
         </div>
+
+        {/* Related Products */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            More from {product.category} 🛍️
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {products
+              .filter((p) => p.category === product.category && p.id !== product.id)
+              .slice(0, 3)
+              .map((related) => (
+                <div
+                  key={related.id}
+                  className="bg-white rounded-2xl shadow-sm hover:shadow-md transition border border-orange-50 overflow-hidden group"
+                >
+                  <div className="h-44 overflow-hidden">
+                    <img
+                      src={related.image}
+                      alt={related.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-gray-800 mb-1">{related.name}</h3>
+                    <div className="flex items-center justify-between">
+                      <p className="text-orange-500 font-bold">${related.price}</p>
+                      <Link
+                        href={`/products/${related.id}`}
+                        className="text-xs bg-orange-500 text-white px-3 py-1.5 rounded-full hover:bg-orange-600 transition"
+                      >
+                        View
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+
       </div>
     </div>
   );
