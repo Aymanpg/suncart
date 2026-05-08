@@ -108,11 +108,11 @@ export default function ProductDetailsPage({ params }) {
           <div className="grid grid-cols-1 md:grid-cols-2">
 
             {/* Image */}
-            <div className="h-80 md:h-full overflow-hidden">
+            <div className="h-80 md:h-full overflow-hidden p-4">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-xl"
               />
             </div>
 
