@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ☀️ SunCart — Summer Essentials Store
 
-## Getting Started
+A modern summer eCommerce platform where users can explore and purchase seasonal products like sunglasses, summer outfits, skincare, beach accessories, and more.
 
-First, run the development server:
+## 🌐 Live URL
 
+🔗 **[https://suncart-z8mw.vercel.app](https://suncart-z8mw.vercel.app)**
+
+## 🎯 Purpose
+
+SunCart is a full-stack web application built as part of the PH Assignment (Category A8 — Jackfruit). It allows users to browse summer products, view detailed information after authentication, manage their profile, and enjoy a smooth shopping experience.
+
+## ✨ Key Features
+
+- 🏠 Beautiful Home Page with animated Hero Banner & Summer Sale highlights
+- 🛍️ Product browsing with search, filter by category, and sort options
+- 🔒 Protected Product Details page (login required to view)
+- 🔁 Redirect back to product after login
+- 🔐 Email & Password Authentication with BetterAuth
+- 🔑 Google OAuth Login support
+- 👤 My Profile page showing user name, photo and email
+- ✏️ Update Profile — change name and photo
+- 📱 Fully responsive on mobile, tablet, and desktop
+- 🎨 Clean & minimal Orange/Yellow summer theme
+- 🎞️ Animate.css animations on Hero section
+- 🔔 Toast notifications for all actions
+
+## 📦 NPM Packages Used
+
+| Package | Purpose |
+|---------|---------|
+| `next` | React framework (App Router) |
+| `better-auth` | Authentication (email + Google OAuth) |
+| `mongodb` | MongoDB database driver |
+| `react-hot-toast` | Toast notifications |
+| `animate.css` | CSS animations |
+| `tailwindcss` | Utility-first CSS styling |
+| `@tailwindcss/postcss` | PostCSS plugin for Tailwind v4 |
+
+## 🛠️ Tech Stack
+
+- **Next.js 16** — App Router
+- **Tailwind CSS** — Styling
+- **DaisyUI** — UI Components
+- **BetterAuth** — Authentication
+- **MongoDB Atlas** — Database
+- **Animate.css** — Animations
+- **Vercel** — Deployment
+
+## 🚀 Getting Started Locally
+
+### 1. Clone the repo
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/suncart.git
+cd suncart
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 3. Set up environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file in the root folder:
 
-## Learn More
+```env
+MONGODB_URI=your_mongodb_connection_string
+BETTER_AUTH_SECRET=your_secret_key
+BETTER_AUTH_URL=http://localhost:3000
+NEXT_PUBLIC_BETTER_AUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Run the development server
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+src/
+├── app/
+│   ├── page.js                   # Home page
+│   ├── layout.js                 # Root layout
+│   ├── globals.css               # Global styles
+│   ├── products/
+│   │   ├── page.js               # All Products page
+│   │   └── [id]/
+│   │       └── page.js           # Product Details (protected)
+│   ├── login/
+│   │   └── page.js               # Login page
+│   ├── register/
+│   │   └── page.js               # Register page
+│   ├── my-profile/
+│   │   ├── page.js               # My Profile page
+│   │   └── update/
+│   │       └── page.js           # Update Profile page
+│   └── api/
+│       └── auth/
+│           └── [...all]/
+│               └── route.js      # BetterAuth API handler
+├── components/
+│   ├── Navbar.jsx                # Responsive Navbar
+│   └── Footer.jsx                # Footer
+├── lib/
+│   ├── auth.js                   # BetterAuth server config
+│   └── auth-client.js            # BetterAuth client config
+└── data/
+    └── products.json             # 24 summer products (static)
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📸 Pages Overview
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Page | Route | Access |
+|------|-------|--------|
+| Home | `/` | Public |
+| All Products | `/products` | Public |
+| Product Details | `/products/[id]` | 🔒 Login Required |
+| Login | `/login` | Public |
+| Register | `/register` | Public |
+| My Profile | `/my-profile` | 🔒 Login Required |
+| Update Profile | `/my-profile/update` | 🔒 Login Required |
+
+## 👨‍💻 Developer
